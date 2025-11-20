@@ -7,7 +7,7 @@ import {
   Indicator,
   TextInput,
 } from "@mantine/core";
-import { Logo } from "./ui/logo";
+import { Logo } from "./logo";
 import { Search, Plus, MessageCircle, Bell } from "lucide-react";
 
 export const Header = () => {
@@ -19,6 +19,12 @@ export const Header = () => {
           <TextInput
             radius="lg"
             placeholder="Search..."
+            style={{
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+            }}
             w={300}
             size="md"
             leftSection={<Search size={20} />}
@@ -37,7 +43,6 @@ export const Header = () => {
             </Indicator>
             <Avatar
               variant="filled"
-              styles={{ root: { border: "2px solid black" } }}
               color="black"
               radius="xl"
               src="/avatar.png"
