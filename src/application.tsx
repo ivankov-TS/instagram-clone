@@ -4,7 +4,7 @@ import { FeedPage } from "./pages/feed-page";
 import { createTheme } from "@mantine/core";
 
 const theme = createTheme({
-  primaryColor: "lime",
+  primaryColor: "teal",
 });
 
 export const Application = () => {

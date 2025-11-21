@@ -26,7 +26,7 @@ export const Navbar = () => {
 
   return (
     <AppShell.Navbar
-      style={{ position: "sticky", width: "212px" }}
+      style={{ position: "sticky", width: "248px" }}
       pl={0}
       p="md"
     >

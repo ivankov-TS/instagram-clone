@@ -1,6 +1,7 @@
 import { AppShell, Container, Group, Text } from "@mantine/core";
 import { Header } from "../shared/ui/header";
 import { Navbar } from "../shared/ui/navbar";
+import { Aside } from "../shared/ui/aside";
 
 export function FeedPage() {
   return (
@@ -15,13 +16,7 @@ export function FeedPage() {
               Layout used in most cases – Navbar and Header with fixed position
             </Text>
           </AppShell.Main>
-          <AppShell.Aside
-            style={{ position: "sticky", width: "212px" }}
-            pr={0}
-            p="md"
-          >
-            Aside
-          </AppShell.Aside>
+          <Aside />
         </Group>
       </Container>
     </AppShell>
