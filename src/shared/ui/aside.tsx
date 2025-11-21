@@ -41,26 +41,42 @@ export const Aside = () => {
       <Stack>
         <Title order={3}>Suggestions For You</Title>
         {suggestedUsers.map((item) => (
-          <Group
-            align="center"
-            gap="xs"
-            style={{ cursor: "pointer", wrap: "nowrap" }}
-          >
-            <Avatar src={item.src} />
-            <Stack gap={4}>
-              <Text size="sm" style={{ whiteSpace: "nowrap" }}>
-                {item.nickname}
-              </Text>
-              <Text c="dimmed" size="xs" style={{ whiteSpace: "nowrap" }}>
-                {item.description}
-              </Text>
-            </Stack>
-          </Group>
+          <SuggestionItem
+            src={item.src}
+            nickname={item.nickname}
+            description={item.description}
+          />
         ))}
         <Button variant="subtle" size="sm">
           See more...
         </Button>
       </Stack>
     </AppShell.Aside>
+  );
+};
+
+type SuggestionItemProps = {
+  src: string;
+  nickname: string;
+  description: string;
+};
+
+const SuggestionItem = ({
+  src,
+  nickname,
+  description,
+}: SuggestionItemProps) => {
+  return (
+    <Group align="center" gap="xs" wrap="nowrap" style={{ cursor: "pointer" }}>
+      <Avatar src={src} />
+      <Stack gap={4}>
+        <Text size="sm" style={{ whiteSpace: "nowrap" }}>
+          {nickname}
+        </Text>
+        <Text c="dimmed" size="xs" style={{ whiteSpace: "nowrap" }}>
+          {description}
+        </Text>
+      </Stack>
+    </Group>
   );
 };
