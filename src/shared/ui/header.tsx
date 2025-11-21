@@ -17,7 +17,6 @@ export const Header = () => {
         <Group h="100%" align="center" justify="space-between">
           <Logo />
           <TextInput
-            radius="lg"
             placeholder="Search..."
             style={{
               position: "absolute",
@@ -30,23 +29,18 @@ export const Header = () => {
             leftSection={<Search size={20} />}
           />
           <Group>
-            <ActionIcon radius="xl" size="lg" variant="default">
+            <ActionIcon size="lg" variant="default">
               <Plus size={20} />
             </ActionIcon>
-            <ActionIcon radius="xl" size="lg" variant="default">
+            <ActionIcon size="lg" variant="default">
               <MessageCircle size={20} />
             </ActionIcon>
             <Indicator size={15} offset={4} withBorder>
-              <ActionIcon radius="xl" size="lg" variant="default">
+              <ActionIcon size="lg" variant="default">
                 <Bell size={20} />
               </ActionIcon>
             </Indicator>
-            <Avatar
-              variant="filled"
-              color="black"
-              radius="xl"
-              src="/avatar.png"
-            />
+            <Avatar variant="filled" color="black" src="/avatar.png" />
           </Group>
         </Group>
       </Container>

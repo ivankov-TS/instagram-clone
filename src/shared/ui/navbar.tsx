@@ -2,7 +2,7 @@ import { AppShell, NavLink, Stack } from "@mantine/core";
 import { Bookmark, Clapperboard, ClockFading, House } from "lucide-react";
 import { useState } from "react";
 
-const data = [
+const menuItems = [
   {
     label: "News Feed",
     icon: House,
@@ -31,11 +31,11 @@ export const Navbar = () => {
       p="md"
     >
       <Stack gap="4px">
-        {data.map((item, index) => (
+        {menuItems.map((item, index) => (
           <NavLink
             href="#"
             label={item.label}
-            style={{ borderRadius: "20px" }}
+            style={{ borderRadius: "25px" }}
             active={index === active}
             onClick={() => setActive(index)}
             leftSection={<item.icon size={20} />}

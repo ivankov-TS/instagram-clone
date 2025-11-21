@@ -8,7 +8,7 @@ import {
   Title,
 } from "@mantine/core";
 
-const adata = [
+const suggestedUsers = [
   {
     src: "/photo1.png",
     nickname: "Kirti Chadha",
@@ -40,20 +40,24 @@ export const Aside = () => {
     >
       <Stack>
         <Title order={3}>Suggestions For You</Title>
-        {adata.map((item) => (
-          <Group align="center">
-            <Avatar radius="xl" src={item.src} />
+        {suggestedUsers.map((item) => (
+          <Group
+            align="center"
+            gap="xs"
+            style={{ cursor: "pointer", wrap: "nowrap" }}
+          >
+            <Avatar src={item.src} />
             <Stack gap={4}>
-              <Text c="white" size="sm">
+              <Text size="sm" style={{ whiteSpace: "nowrap" }}>
                 {item.nickname}
               </Text>
-              <Text c="gray" size="xs">
+              <Text c="dimmed" size="xs" style={{ whiteSpace: "nowrap" }}>
                 {item.description}
               </Text>
             </Stack>
           </Group>
         ))}
-        <Button variant="outline" radius="xl" color="teal" w="100px" size="sm">
+        <Button variant="subtle" size="sm">
           See more...
         </Button>
       </Stack>

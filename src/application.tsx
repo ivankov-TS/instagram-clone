@@ -5,6 +5,7 @@ import { createTheme } from "@mantine/core";
 
 const theme = createTheme({
   primaryColor: "teal",
+  defaultRadius: "xl",
 });
 
 export const Application = () => {
